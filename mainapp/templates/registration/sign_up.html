@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}Sign Up{% endblock %}
+
+{% block content %}
+    <h1>Sign Up</h1>
+
+    <!-- Display form errors if there are any -->
+    {% if form.errors %}
+        <p>Please correct the errors below:</p>
+    {% endif %}
+
+    <!-- Form to create a new user -->
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}  <!-- This will render the form fields for username, email, and password -->
+        
+        <p>
+            <button type="submit">Sign Up</button>
+        </p>
+    </form>
+
+    <p>
+        Already have an account? <a href="{% url 'login' %}">Log in</a>.
+    </p>
+{% endblock %}

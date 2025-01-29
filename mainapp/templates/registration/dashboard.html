@@ -3,7 +3,14 @@
 {% block content %}
     <h1>Dashboard</h1>
     <p>Hello, {{ request.user.username }}</p>
+    <p>Email: {{ request.user.email }}</p>
     <p>Welcome to your page!</p>
+
+    <!-- Date Joined -->
+    <p>Date Joined: {{ request.user.date_joined|date:"F j, Y, g:i a" }}</p>
+
+    <!-- Last Login -->
+    <p>Last Login: {{ request.user.last_login|date:"F j, Y, g:i a" }}</p>
 
     <!-- Change Password Link -->
     <p>You can change your password <a href="{% url 'password_change' %}">here</a>.</p>

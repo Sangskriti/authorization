@@ -127,6 +127,8 @@ LOGIN_REDIRECT_URL = 'dashboard'
 LOGIN_URL = 'login'
 # LOGOUT_URL = 'logout'
 LOGOUT_REDIRECT_URL = 'logout'
+SIGNUP_REDIRECT_URL = 'dashboard'
+PASSWORD_RESET_REDIRECT_URL = 'login'
   # Redirect to the homepage or login page after logout
 
 
@@ -136,3 +138,11 @@ LOGOUT_REDIRECT_URL = 'logout'
 # LOGIN_URL = '/mainapp/login/'
 # LOGIN_REDIRECT_URL = '/mainapp/dashboard/'
 # LOGOUT_URL = '/mainapp/logout'
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'  # For example, using Gmail
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'dola2000sulagna@example.com'  # Replace with your email
+EMAIL_HOST_PASSWORD = 'iosdovwslisyyocx'      # Replace with your email password
+DEFAULT_FROM_EMAIL = 'sulagna2024mukherjee@example.com'
